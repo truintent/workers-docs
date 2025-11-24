@@ -56,25 +56,32 @@ This repository contains **root-level documentation** for the TruIntent multi-ag
 
 ### Essential Guides
 
-1. **[GATEWAY_ARCHITECTURE_SPEC.md](GATEWAY_ARCHITECTURE_SPEC.md)** ✨ NEWEST
+1. **[DEVELOPMENT_ROADMAP.md](DEVELOPMENT_ROADMAP.md)** ✨ NEWEST - START HERE!
+   - **P0 Critical (9h)** - Deploy this week: Fix tests, security, rate limiting
+   - **P1 High (67.5h)** - Deploy this sprint: Backend + Frontend optimizations
+   - **P2 Medium (30h)** - Next sprint: Architecture improvements
+   - Complete timeline, success metrics, developer onboarding
+   - Expected improvements: 50% faster workflows, 60% faster initial load
+
+2. **[GATEWAY_ARCHITECTURE_SPEC.md](GATEWAY_ARCHITECTURE_SPEC.md)**
    - AI model specifications for all 5 gateways
    - System prompt templates per gateway
    - Consistent scaffolding patterns
    - Deployment commands
 
-2. **[CURRENT_STATE_SUMMARY.md](CURRENT_STATE_SUMMARY.md)**
+3. **[CURRENT_STATE_SUMMARY.md](CURRENT_STATE_SUMMARY.md)**
    - What's deployed vs. what needs work
    - Actor deployment summary by gateway
    - Next steps priority list
    - Verification commands
 
-3. **[WORKER_ARCHITECTURE.md](WORKER_ARCHITECTURE.md)**
+4. **[WORKER_ARCHITECTURE.md](WORKER_ARCHITECTURE.md)**
    - Complete 6-worker architecture
    - Grandparent-Parent-Child hierarchy
    - Tool distribution strategy (why 5 gateways?)
    - Queue + Actor integration patterns
 
-4. **[QUICK_REFERENCE.md](QUICK_REFERENCE.md)**
+5. **[QUICK_REFERENCE.md](QUICK_REFERENCE.md)**
    - Copy-paste deployment commands
    - Health check scripts
    - Common troubleshooting
@@ -147,11 +154,11 @@ done
 
 | Gateway | Model | Tools | Actors | Purpose |
 |---------|-------|-------|--------|---------|
-| **research-gateway** | GPT-4o-mini | 12 | 3 | Web research, scraping, KB queries |
-| **data-gateway** | GPT-4o-mini | 8 | 6 | SQL, B2B audiences, data validation |
-| **crm-gateway** | GPT-4o-mini | 10 | 7 | GoHighLevel, HubSpot, Instantly |
-| **cdp-gateway** | GPT-4o-mini | 10 | 5 | Customer data, scoring, audiences |
-| **content-gateway** | GPT-4o-mini | 15 | 2 | Copywriting, automation, browser tools |
+| **research-gateway** | gemini-2.5-flash | 12 | 3 | Web research, scraping, KB queries |
+| **data-gateway** | gpt-5-mini | 8 | 6 | SQL, B2B audiences, data validation |
+| **crm-gateway** | gpt-5-mini | 10 | 7 | GoHighLevel, HubSpot, Instantly |
+| **cdp-gateway** | gpt-5-mini | 10 | 5 | Customer data, scoring, audiences |
+| **content-gateway** | gpt-5-mini | 15 | 2 | Copywriting, automation, browser tools |
 
 ### Children: Durable Objects (Cloudflare Actors)
 
